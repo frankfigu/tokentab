@@ -4,12 +4,11 @@ import subprocess
 import random
 import string
 import argparse 
-import sys 
+import sys
 from pathlib import Path
-from tokentab import setup
 
 
-setup.run_sync()
+process = subprocess.Popen(["python", "tokentab/setup.py"])
 
 def _banner() -> Panel:
     return Panel.fit(
